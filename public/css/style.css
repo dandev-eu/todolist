@@ -1,0 +1,23 @@
+html, body {
+    
+    background-color: #594B3F;
+    background-image: -webkit-linear-gradient(65deg, #594B3F 50%, #C4F2F2 50%);
+    height: 100%;
+    color: #0E1B26;
+}
+.container {
+    background-color: #A4B0BF;
+    max-height: 100%;
+    margin-top: 1rem;
+    border-radius: 2%;
+}
+
+h1,h2 {
+    text-align: center;
+}
+
+.btn-plus {
+    color: #F2F2F2;
+    background-color: #0E1B26;
+    border-radius: 50%;
+}
