@@ -1,5 +1,6 @@
 const express = require("express")
 const bodyParser = require("body-parser")
+const date = require(__dirname + '/date.js')
 
 const app = express()
 
@@ -13,15 +14,9 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 
 app.get("/", (req,res)=> {
-
-    const today = new Date()
-    const days = [
-        'Sunday', 'Monday', 'Tuesday',
-        'Wednesday', 'Thursday', 'Friday',
-        'Saturday', 
-    ]
-
-    res.render('list', {today: days[today.getDay()], tasks: tasks})
+    // add from module date
+    const today = date.getDay()
+    res.render('list', {today: today, tasks: tasks})
 })
 
 app.post("/", (req, res)=> {
@@ -29,7 +24,7 @@ app.post("/", (req, res)=> {
     res.redirect("/")
 })
 
-app.get("/clear", ()=> {
+app.get("/clear", (req, res)=> {
     tasks = []
     res.redirect("/")
 })
