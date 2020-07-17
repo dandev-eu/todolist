@@ -28,6 +28,12 @@ app.post("/", (req, res)=> {
     tasks.push(req.body.task)
     res.redirect("/")
 })
+
+app.get("/clear", ()=> {
+    tasks = []
+    res.redirect("/")
+})
+
 app.listen(3000, ()=> {
     console.log("Server is running on port 3000")
 })

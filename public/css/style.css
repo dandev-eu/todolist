@@ -21,3 +21,12 @@ h1,h2 {
     background-color: #0E1B26;
     border-radius: 50%;
 }
+
+a {
+    color: #594B3F;
+} 
+
+a:hover {
+    color: red;
+    text-decoration: none;
+}
